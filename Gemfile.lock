@@ -329,6 +329,7 @@ DEPENDENCIES
   bootsnap (>= 1.15.0)
   byebug
   dotenv-rails (~> 2.7)
+  faraday
   listen (~> 3.2)
   otr-activerecord
   pagy_cursor
