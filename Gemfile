@@ -32,11 +32,13 @@ gem 'slack-ruby-bot-server-events'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails', '~> 6.1.0'
   gem 'rubocop', '1.31.2', require: false
 end
 
 group :development do
   gem 'listen', '~> 3.2'
+  gem 'rubocop-rspec', require: false
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
