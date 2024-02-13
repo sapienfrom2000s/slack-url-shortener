@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Link Shortner', type: :request do
-  let(:shortened_url_regex) { %r{^(https://customdomain\.com)/([a-zA-Z0-9_]){5}$} }
+  let(:shortened_url_regex) { %r{^(https://customdomain)/([a-zA-Z0-9_]){5}$} }
   let(:good_url) { 'https://www.youtube.com/watch?v=SJovyCWgiZs' }
   let(:bad_url) { 'http::bla' }
 

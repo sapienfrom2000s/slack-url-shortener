@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Url do
   describe '#shorten' do
-    let!(:shortened_url_regex) { %r{^(https://customdomain\.com)/([a-zA-Z0-9_]){5}$} }
+    let!(:shortened_url_regex) { %r{^(https://customdomain)/([a-zA-Z0-9_]){5}$} }
     let!(:url) { 'https://www.youtube.com/watch?v=SJovyCWgiZs' }
 
     it 'must return a shortened url' do

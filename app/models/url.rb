@@ -5,7 +5,7 @@ class Url < ApplicationRecord
   validates :shortened, presence: true
   validates :original, presence: true
 
-  DOMAIN = 'customdomain.com'.freeze
+  DOMAIN = 'customdomain'.freeze
 
   def self.generate_alphanumeric_code(length = 5)
     SecureRandom.alphanumeric(length)
