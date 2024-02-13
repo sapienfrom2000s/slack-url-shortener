@@ -35,13 +35,13 @@ RSpec.describe Url do
   end
 
   describe '#valid?' do
-    it 'must return true if a valid link is passed' do
+    it 'must return true if url is passed' do
       good_url = 'https://lichess.org'
       expect(described_class.valid?(good_url)).to be true
     end
 
-    it 'must return false if an invalid link is passed' do
-      bad_url = 'http::bla'
+    it 'must return false if url is not passed' do
+      bad_url = 'a normal string'
       expect(described_class.valid?(bad_url)).to be false
     end
   end

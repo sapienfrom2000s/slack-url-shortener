@@ -1,4 +1,4 @@
-require 'faraday'
+require 'uri'
 require 'securerandom'
 
 class Url < ApplicationRecord
@@ -12,9 +12,10 @@ class Url < ApplicationRecord
   end
 
   def self.valid?(url)
-    Faraday.get(url).success?
-  rescue StandardError
-    false
+    url = URI.parse(url)
+    url.kind_of? URI::HTTP
+    rescue URI::InvalidURIError
+      false
   end
 
   def self.shorten(url)
